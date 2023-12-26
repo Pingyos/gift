@@ -5,9 +5,8 @@
     <meta name="description" content>
     <meta name="author" content>
 
-    <title>Topic Listing Bootstrap 5 Template</title>
-
-    <!-- CSS FILES -->
+    <title>gift2023</title>
+    <link href="logo.png" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

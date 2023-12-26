@@ -7,10 +7,8 @@
 
     <meta name="description" content>
     <meta name="author" content>
-
-    <title>Topic Listing Bootstrap 5 Template</title>
-
-    <!-- CSS FILES -->
+    <link href="../logo.png" rel="icon">
+    <title>gift2023</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,16 +24,18 @@
 
 <body id="top">
     <main>
-        
+
         <section class="explore-section section-padding" id="section_2">
             <div class="container">
                 <div class="row">
-
                     <div class="col-12 text-center">
-                        <h2 class="mb-4">Live Data</h1>
+                        <h2 class="mb-2">Live Data</h1>
+                            <a href="index.php">
+                                <h6>กลับหน้าหลัก</h6>
+                            </a>
                     </div>
-
                 </div>
+                <hr>
             </div>
             <div class="container">
                 <div class="row">
@@ -71,8 +71,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-
-                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 คณะกรรมการของรางวัล
                     </p>
                 </div>
             </div>

@@ -4,15 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content>
     <meta name="author" content>
-
-    <title>Topic Listing Bootstrap 5 Template</title>
-
-    <!-- CSS FILES -->
+    <title>gift2023</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
+    <link href="../logo.png" rel="icon">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Noto+Sans+Thai:wght@500&display=swap" rel="stylesheet">
@@ -37,6 +33,11 @@
                                         <div class="row">
                                             <div class="col-lg-8 col-12 mx-auto">
                                                 <h1 class="text-white text-center">ตรวจสอบของรางวัล</h1>
+                                                <div class="text-white text-center">
+                                                    <a href="index.php">
+                                                        <h6>กลับหน้าหลัก</h6>
+                                                    </a>
+                                                </div>
                                                 <form method="get" class="custom-form mt-4 pt-2 mb-lg-5 mb-5" role="search">
                                                     <div class="input-group input-group-lg">
                                                         <input name="keyword" type="search" class="form-control" id="keyword" placeholder="ระบุหมายเลข" aria-label="Search">
@@ -104,8 +105,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-
-                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 คณะกรรมการของรางวัล
                     </p>
                 </div>
             </div>

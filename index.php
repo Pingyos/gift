@@ -4,7 +4,6 @@
 
 <body id="top">
     <main>
-        <?php require_once 'nav.php' ?>
         <section class="explore-section section-padding" id="section_2">
             <div class="container">
                 <div class="row">
@@ -20,8 +19,6 @@
                                                         <h5 class="mb-2">บันทึกข้อมูล</h5>
                                                     </div>
                                                 </div>
-
-                                                <img src="images/topics/undraw_Remote_design_team_re_urdx.png" class="custom-block-image img-fluid" alt>
                                             </a>
                                         </div>
                                     </div>
@@ -34,7 +31,6 @@
                                                         <h5 class="mb-2">เพิ่มของรางวัล</h5>
                                                     </div>
                                                 </div>
-                                                <img src="images/topics/undraw_Redesign_feedback_re_jvm0.png" class="custom-block-image img-fluid" alt>
                                             </a>
                                         </div>
                                     </div>
@@ -47,8 +43,6 @@
                                                         <h5 class="mb-2">ค้นหา</h5>
                                                     </div>
                                                 </div>
-
-                                                <img src="images/topics/colleagues-working-cozy-office-medium-shot.png" class="custom-block-image img-fluid" alt>
                                             </a>
                                         </div>
                                     </div>
@@ -63,8 +57,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-
-                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 คณะกรรมการของรางวัล
                     </p>
                 </div>
             </div>

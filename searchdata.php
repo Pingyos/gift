@@ -5,7 +5,6 @@
 
 <body id="top">
     <main>
-        <?php require_once 'nav.php' ?>
         <section class="explore-section section-padding" id="section_2">
             <div class="container">
                 <div class="row">
@@ -17,6 +16,11 @@
                                         <div class="row">
                                             <div class="col-lg-8 col-12 mx-auto">
                                                 <h1 class="text-white text-center">ตรวจสอบของรางวัล</h1>
+                                                <div class="text-white text-center">
+                                                    <a href="index.php">
+                                                        <h6>กลับหน้าหลัก</h6>
+                                                    </a>
+                                                </div>
                                                 <form method="get" class="custom-form mt-4 pt-2 mb-lg-5 mb-5" role="search">
                                                     <div class="input-group input-group-lg">
                                                         <input name="keyword" type="search" class="form-control" id="keyword" placeholder="ระบุหมายเลข" aria-label="Search" required>
@@ -51,15 +55,15 @@
 
                                                 foreach ($currentPageData as $t1) {
                                                     echo '<div class="col-lg-8 col-12 mb-lg-2 mb-2 mx-auto">
-                    <div class="custom-block bg-white shadow-lg">
-                        <div class="d-flex">
-                            <div>
-                                <h5 class="mb-2">' . $t1['name'] . '</h5>
-                                <h6 class="mb-2">' . $t1['giftname'] . '</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>';
+                                                        <div class="custom-block bg-white shadow-lg">
+                                                            <div class="d-flex">
+                                                                <div>
+                                                                    <h5 class="mb-2">' . $t1['name'] . '</h5>
+                                                                    <h6 class="mb-2">' . $t1['giftname'] . '</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>';
                                                 }
 
                                                 // Display pagination links
@@ -100,8 +104,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-
-                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2048 Topic Listing Center. All rights reserved.
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 คณะกรรมการของรางวัล
                     </p>
                 </div>
             </div>
