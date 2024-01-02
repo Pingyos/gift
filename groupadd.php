@@ -25,16 +25,34 @@
                                 <div class="row">
                                     <div class="col-lg-12 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
                                         <form class="custom-form subscribe-form" action="#" method="post" role="form">
-                                            <input type="text" name="giftname" id="giftname" class="form-control" placeholder="ของรางวัล" required>
+                                            <div class="col-lg-12 col-12">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-6 mb-2">
+                                                        <input type="text" name="giftname" id="giftname" class="form-control" placeholder="ชุดรางวัลที่" required>
+                                                    </div>
+                                                    <div class="col-lg-6 col-6 mb-2">
+                                                        <select name="datagroup" id="datagroup" class="form-control" required>
+                                                            <option value="1">ชุดที่ 1</option>
+                                                            <option value="2">ชุดที่ 2</option>
+                                                            <option value="3">ชุดที่ 3</option>
+                                                            <option value="4">ชุดที่ 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                             <div class="col-lg-12 col-12">
                                                 <button type="submit" class="form-control">เพิ่ม</button>
                                             </div>
                                             <?php
-                                            if (isset($_POST['giftname'])) {
+                                            if (isset($_POST['giftname']) && isset($_POST['datagroup'])) {
                                                 require_once 'connect.php';
                                                 $giftname = $_POST['giftname'];
-                                                $stmt = $conn->prepare("INSERT INTO `group` (giftname) VALUES (:giftname)");
+                                                $datagroup = $_POST['datagroup'];
+                                                $stmt = $conn->prepare("INSERT INTO `group` (giftname, datagroup) VALUES (:giftname, :datagroup)");
                                                 $stmt->bindParam(':giftname', $giftname, PDO::PARAM_STR);
+                                                $stmt->bindParam(':datagroup', $datagroup, PDO::PARAM_INT);
+
                                                 $result = $stmt->execute();
                                                 echo '
                                                 <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
@@ -45,8 +63,11 @@
                                                     echo '<script>
                                                         setTimeout(function() {
                                                         swal({
-                                                            title: "เพิ่มข้อมูลสำเร็จ",
-                                                            type: "success"
+                                                            title: "บันทึกข้อมูลสำเร็จ", 
+                                                            text: "กรุณารอสักครู่",
+                                                            type: "success", 
+                                                            timer: 800, 
+                                                            showConfirmButton: false 
                                                         }, function() {
                                                             window.location = "groupadd.php"; //หน้าที่ต้องการให้กระโดดไป
                                                         });
@@ -80,7 +101,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
-                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2023 คณะกรรมการของรางวัล
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2024 คณะกรรมการของรางวัล
                     </p>
                 </div>
             </div>

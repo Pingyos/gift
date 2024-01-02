@@ -5,7 +5,7 @@
     <meta name="description" content>
     <meta name="author" content>
 
-    <title>gift2023</title>
+    <title>gift2024</title>
     <link href="logo.png" rel="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
