@@ -50,7 +50,7 @@
                             <div class="tab-pane fade show active" id="all-tab-pane" role="tabpanel" aria-labelledby="all-tab" tabindex="0">
                                 <div class="row">
                                     <?php
-                                    require_once 'connect.php';
+                                    require_once '../connect.php';
 
                                     $groupStmt = $conn->prepare("SELECT * FROM `group`");
                                     $groupStmt->execute();
@@ -84,7 +84,7 @@
                             <div class="tab-pane fade" id="set1-tab-pane" role="tabpanel" aria-labelledby="set1-tab" tabindex="0">
                                 <div class="row">
                                     <?php
-                                    require_once 'connect.php';
+                                    require_once '../connect.php';
 
                                     $groupStmt = $conn->prepare("SELECT * FROM `group` WHERE datagroup = 1");
                                     $groupStmt->execute();
@@ -120,7 +120,7 @@
                             <div class="tab-pane fade" id="set2-tab-pane" role="tabpanel" aria-labelledby="set2-tab" tabindex="0">
                                 <div class="row">
                                     <?php
-                                    require_once 'connect.php';
+                                    require_once '../connect.php';
 
                                     $groupStmt = $conn->prepare("SELECT * FROM `group` WHERE datagroup = 2");
                                     $groupStmt->execute();
@@ -156,7 +156,7 @@
                             <div class="tab-pane fade" id="set3-tab-pane" role="tabpanel" aria-labelledby="set3-tab" tabindex="0">
                                 <div class="row">
                                     <?php
-                                    require_once 'connect.php';
+                                    require_once '../connect.php';
 
                                     $groupStmt = $conn->prepare("SELECT * FROM `group` WHERE datagroup = 3");
                                     $groupStmt->execute();
@@ -192,7 +192,7 @@
                             <div class="tab-pane fade" id="set4-tab-pane" role="tabpanel" aria-labelledby="set4-tab" tabindex="0">
                                 <div class="row">
                                     <?php
-                                    require_once 'connect.php';
+                                    require_once '../connect.php';
 
                                     $groupStmt = $conn->prepare("SELECT * FROM `group` WHERE datagroup = 4");
                                     $groupStmt->execute();
@@ -241,11 +241,11 @@
     </footer>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/click-scroll.js"></script>
+    <script src="../js/custom.js"></script>
 
 </body>
 

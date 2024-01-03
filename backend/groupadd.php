@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h2 class="mb-4">ผู้ได้รับของรางวัล</h1>
+                        <h2 class="mb-4">เพิ่มของรางวัล</h1>
                             <a href="index.php">
                                 <h6>กลับหน้าหลัก</h6>
                             </a>
@@ -28,7 +28,7 @@
                                             <div class="col-lg-12 col-12">
                                                 <div class="row">
                                                     <div class="col-lg-6 col-6 mb-2">
-                                                        <input type="text" name="giftname" id="giftname" class="form-control" placeholder="ชุดรางวัลที่" required>
+                                                        <input type="text" name="giftname" id="giftname" class="form-control" placeholder="ชื่อของรางวัล" required>
                                                     </div>
                                                     <div class="col-lg-6 col-6 mb-2">
                                                         <select name="datagroup" id="datagroup" class="form-control" required>
@@ -46,7 +46,7 @@
                                             </div>
                                             <?php
                                             if (isset($_POST['giftname']) && isset($_POST['datagroup'])) {
-                                                require_once 'connect.php';
+                                                require_once '../connect.php';
                                                 $giftname = $_POST['giftname'];
                                                 $datagroup = $_POST['datagroup'];
                                                 $stmt = $conn->prepare("INSERT INTO `group` (giftname, datagroup) VALUES (:giftname, :datagroup)");
@@ -109,11 +109,11 @@
     </footer>
 
     <!-- JAVASCRIPT FILES -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/jquery.sticky.js"></script>
-    <script src="js/click-scroll.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/click-scroll.js"></script>
+    <script src="../js/custom.js"></script>
 
 </body>
 

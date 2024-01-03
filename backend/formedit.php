@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<?php require_once 'head.php' ?>
+
+<body id="top">
+    <main>
+        <section class="explore-section section-padding" id="section_2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2 class="mb-4">แก้ไขของรางวัล</h1>
+                            <a href="edit.php">
+                                <h6>กลับหน้าหลัก</h6>
+                            </a>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="design-tab-pane" role="tabpanel" aria-labelledby="design-tab" tabindex="0">
+                                <div class="row">
+                                    <div class="col-lg-12 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
+                                        <form class="custom-form subscribe-form" method="post" role="form">
+                                            <?php
+                                            if (isset($_GET['id'])) {
+                                                require_once '../connect.php';
+                                                $groupId = $_GET['id'];
+                                                $stmt = $conn->prepare("SELECT * FROM `group` WHERE id = :groupId");
+                                                $stmt->bindParam(':groupId', $groupId, PDO::PARAM_INT);
+                                                $stmt->execute();
+                                                $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                                                if ($stmt->rowCount() < 1) {
+                                                    header('Location: index.php');
+                                                    exit();
+                                                }
+                                            }
+                                            ?>
+                                            <div class="col-lg-12 col-12">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-6 mb-2">
+                                                        <input type="text" name="giftname" id="giftname" class="form-control" value="<?= $row['giftname']; ?>" placeholder="ชุดรางวัลที่">
+                                                    </div>
+                                                    <div class="col-lg-6 col-6 mb-2">
+                                                        <select name="datagroup" id="datagroup" class="form-control">
+                                                            <option value="1" <?= ($row['datagroup'] == 1) ? 'selected' : ''; ?>>ชุดที่ 1</option>
+                                                            <option value="2" <?= ($row['datagroup'] == 2) ? 'selected' : ''; ?>>ชุดที่ 2</option>
+                                                            <option value="3" <?= ($row['datagroup'] == 3) ? 'selected' : ''; ?>>ชุดที่ 3</option>
+                                                            <option value="4" <?= ($row['datagroup'] == 4) ? 'selected' : ''; ?>>ชุดที่ 4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-12">
+                                                <button type="submit" class="form-control">แก้ไข</button>
+                                            </div>
+                                        </form>
+                                        <?php
+                                        if (isset($_POST['giftname']) && isset($_POST['datagroup'])) {
+                                            require_once '../connect.php';
+                                            $giftname = $_POST['giftname'];
+                                            $datagroup = $_POST['datagroup'];
+                                            $updateStmt = $conn->prepare("UPDATE `group` SET giftname = :giftname, datagroup = :datagroup WHERE id = :groupId");
+                                            $updateStmt->bindParam(':giftname', $giftname, PDO::PARAM_STR);
+                                            $updateStmt->bindParam(':datagroup', $datagroup, PDO::PARAM_INT);
+                                            $updateStmt->bindParam(':groupId', $groupId, PDO::PARAM_INT);
+                                            if ($updateStmt->execute()) {
+                                                echo '
+                                                <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+                                                <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+                                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">';
+                                                echo '<script>
+                                                        setTimeout(function() {
+                                                            swal({
+                                                                title: "บันทึกข้อมูลสำเร็จ", 
+                                                                text: "กรุณารอสักครู่",
+                                                                type: "success", 
+                                                                timer: 800, 
+                                                                showConfirmButton: false 
+                                                            }, function() {
+                                                                window.location = "edit.php";
+                                                            });
+                                                            }, 1000);
+                                                    </script>';
+                                            } else {
+                                                echo '<script>
+                                                setTimeout(function() {
+                                                    swal({
+                                                        title: "เกิดข้อผิดพลาด",
+                                                        type: "error"
+                                                    }, function() {
+                                                        window.location = "index.php";
+                                                    });
+                                                }, 1000);
+                                            </script>';
+                                            }
+                                            $conn = null;
+                                        }
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-4 col-12 mt-4 mt-lg-0 ms-auto">
+                    <p class="copyright-text mt-lg-5 mt-4">Copyright © 2024 คณะกรรมการของรางวัล
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT FILES -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/jquery.sticky.js"></script>
+    <script src="../js/click-scroll.js"></script>
+    <script src="../js/custom.js"></script>
+
+</body>
+
+</html>
