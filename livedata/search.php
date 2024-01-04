@@ -32,16 +32,16 @@
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-lg-8 col-12 mx-auto">
-                                                <h1 class="text-white text-center">ตรวจสอบของรางวัล</h1>
+                                                <h1 class="text-white text-center">Search Prize Results</h1>
                                                 <div class="text-white text-center">
                                                     <a href="index.php">
-                                                        <h6>กลับหน้าหลัก</h6>
+                                                        <h6>Return to Main Page</h6>
                                                     </a>
                                                 </div>
                                                 <form method="get" class="custom-form mt-4 pt-2 mb-lg-5 mb-5" role="search">
                                                     <div class="input-group input-group-lg">
-                                                        <input name="keyword" type="search" class="form-control" id="keyword" placeholder="ระบุหมายเลข" aria-label="Search">
-                                                        <button type="submit" class="form-control">ค้นหา</button>
+                                                        <input name="keyword" type="search" class="form-control" id="keyword" placeholder="Enter ticket number." aria-label="Search" required>
+                                                        <button type="submit" class="form-control">Search</button>
                                                     </div>
                                                 </form>
                                             </div>
@@ -74,7 +74,7 @@
                                                         <div class="custom-block bg-white shadow-lg">
                                                             <div class="d-flex">
                                                                 <div>
-                                                                    <p>ไม่พบผลลัพธ์สำหรับคำค้นหา "' . $keyword . '"</p>
+                                                                    <p>No results found for the search. "' . $keyword . '"</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -86,7 +86,7 @@
                                                     <div class="custom-block bg-white shadow-lg">
                                                         <div class="d-flex">
                                                             <div>
-                                                                <p>กรุณากรอกคำค้นหา.</p>
+                                                                <p>Enter search text.</p>
                                                             </div>
                                                         </div>
                                                     </div>

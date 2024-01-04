@@ -31,9 +31,6 @@
 
                     <div class="col-12 text-center">
                         <h2 class="mb-2">Live Data</h1>
-                            <a href="index.php">
-                                <h6>กลับหน้าหลัก</h6>
-                            </a>
                     </div>
                 </div>
                 <hr>
